@@ -331,7 +331,8 @@ footer {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px)
+ {
   .semester-grid,
   .module-grid {
     grid-template-columns: 1fr;
@@ -344,5 +345,4 @@ footer {
   
   .semester h3 {
     font-size: 1.3rem;
-  }
-
+  }}
