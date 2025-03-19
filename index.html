@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Sharing Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="semester_design.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white py-3 mb-4 animate__animated animate__fadeInDown">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-white text-decoration-none fs-4">Home</a>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownNumbers" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Semester
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNumbers">
+              <li><a class="dropdown-item" href="semesters/sem1/sem1.html">1</a></li>
+              <li><a class="dropdown-item" href="semesters/sem2/sem2.html">2</a></li>
+              <li><a class="dropdown-item" href="semesters/sem3/sem3.html">3</a></li>
+              <li><a class="dropdown-item" href="semesters/sem4/sem4.html">4</a></li>
+              <li><a class="dropdown-item" href="semesters/sem5/sem5.html">5</a></li>
+              <li><a class="dropdown-item" href="semesters/sem6/sem6.html">6</a></li>
+              <li><a class="dropdown-item" href="semesters/sem7/sem7.html">7</a></li>
+              <li><a class="dropdown-item" href="semesters/sem8/sem8.html">8</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Home Page: All Semester Cards -->
+    <div id="home" class="main-container">
+      <h1 class="main-title text-center">Notes Sharing Website</h1>
+      <div class="semester-grid">
+        <a href="semesters/sem1/sem1.html" class="semester card-hover">Semester 1</a>
+        <a href="semesters/sem2/sem2.html" class="semester card-hover">Semester 2</a>
+        <a href="semesters/sem3/sem3.html" class="semester card-hover">Semester 3</a>
+        <a href="semesters/sem4/sem4.html" class="semester card-hover">Semester 4</a>
+        <a href="semesters/sem5/sem5.html" class="semester card-hover">Semester 5</a>
+        <a href="semesters/sem6/sem6.html" class="semester card-hover">Semester 6</a>
+        <a href="semesters/sem7/sem7.html" class="semester card-hover">Semester 7</a>
+        <a href="semesters/sem8/sem8.html" class="semester card-hover">Semester 8</a>
+      </div>
+    </div>
+
+    <!-- Example In-Page Section (for internal navigation) -->
+    <div id="semester2" class="main-container" style="display: none;">
+      <h1 class="main-title">Semester 2 Subjects</h1>
+      <div class="semester-grid">
+        <a href="#subject2-1" class="subject card-hover">Mathematics II</a>
+        <a href="#subject2-2" class="subject card-hover">Physics II</a>
+        <a href="#subject2-3" class="subject card-hover">Chemistry II</a>
+        <a href="#subject2-4" class="subject card-hover">Programming II</a>
+        <a href="#subject2-5" class="subject card-hover">Electronics</a>
+        <a href="#subject2-6" class="subject card-hover">Thermodynamics</a>
+        <a href="#subject2-7" class="subject card-hover">Material Science</a>
+        <a href="#subject2-8" class="subject card-hover">Digital Logic</a>
+      </div>
+      <a href="#home" class="back-button">Back to Home</a>
+    </div>
+    
+    <div id="subject2-1" class="main-container" style="display: none;">
+      <h1 class="main-title">Mathematics II - Semester 2</h1>
+      <div class="module-grid">
+        <a href="https://drive.google.com" target="_blank" class="module card-hover pdf-link">
+          <span>Module 1</span>
+          <span class="badge">PDF</span>
+        </a>
+        <a href="https://drive.google.com" target="_blank" class="module card-hover pdf-link">
+          <span>Module 2</span>
+          <span class="badge">PDF</span>
+        </a>
+        <a href="https://drive.google.com" target="_blank" class="module card-hover pdf-link">
+          <span>Module 3</span>
+          <span class="badge">PDF</span>
+        </a>
+        <a href="https://drive.google.com" target="_blank" class="module card-hover pdf-link">
+          <span>Module 4</span>
+          <span class="badge">PDF</span>
+        </a>
+        <a href="https://drive.google.com" target="_blank" class="module card-hover pdf-link">
+          <span>Module 5</span>
+          <span class="badge">PDF</span>
+        </a>
+      </div>
+      <a href="#semester2" class="back-button">Back to Semester 2</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3 mt-4 animate__animated animate__fadeInUp">
+    <div class="container text-center">
+      <p>&copy; 2025 @Noteshub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- In-Page Navigation JS (for internal links starting with "#") -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          document.querySelectorAll('.main-container').forEach(page => {
+            page.style.display = 'none';
+          });
+          const targetPage = document.getElementById(targetId);
+          if (targetPage) {
+            targetPage.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+    // Show home page by default
+    document.getElementById('home').style.display = 'block';
+  </script>
+</body>
+</html>
